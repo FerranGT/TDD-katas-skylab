@@ -42,25 +42,32 @@ describe("function passwordValidation", function() {
   it("function passwordValidation should exist", function() { 
     expect(passwordValidation).toBeDefined();
     });
-  it("function passwordValidation should return an string", function() {
-    expect(typeof passwordValidation("password")).toBe("string");
+  it("function passwordValidation should return a bolean", function() {
+    expect(typeof passwordValidation("password")).toBe("boolean");
     });
   it("function passwordValidation should be defined w/ one argument", function() {
-    expect(passwordValidation.length).toBe(1);
+    expect(passwordValidation.length).toBe(2);
     });
-  it("function passwordValidation should return 'true' when password contains one letter in uppercase", function() {
-    expect(passwordValidation("pasSword")).toBe("true");
+  it("function passwordValidation should return 'true' when password contains all the specifications", function() {
+    expect(passwordValidation("PASSW99RDqq$qq")).toBe(true);
+    });
+  it("function passwordValidation should return 'false' when password no contains all the specifications", function() {
+    expect(passwordValidation("password")).toBe(false);
     });
   it("function passwordValidation should return 'true' when password contains at least 2 numbers (digits)", function() {
-    expect(passwordValidation("password11")).toBe("true");
-    });
-  it("function passwordValidation should return 'true' when password contains at least one of these special characters: $ # % & - ! ?", function() {
-    expect(passwordValidation("password!")).toBe("true");
-    });
-  it("function passwordValidation should return 'true' when password has 10 characters or more", function() {
-    expect(passwordValidation("passworddd")).toBe("true");
+    expect(passwordValidation("pa33srwfSs66Fdd",config = {size : 12, uppercase : 2, numbers : 3, special : "fgt"})).toBe(true);
     });
   /*
+  it("function passwordValidation should return 'true' when password contains at least 2 numbers (digits)", function() {
+    expect(passwordValidation("password11")).toBe(true);
+    });
+  it("function passwordValidation should return 'true' when password contains at least one of these special characters: $ # % & - ! ?", function() {
+    expect(passwordValidation("password!")).toBe(true);
+    });
+  it("function passwordValidation should return 'true' when password has 10 characters or more", function() {
+    expect(passwordValidation("passworddd")).toBe(true);
+    });
+  
   it("should return a string", function() {
     expect(typeof passwordValidation(95,92,93)).toBe("string");
     });

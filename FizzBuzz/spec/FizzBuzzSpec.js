@@ -42,80 +42,24 @@ describe("function FizzBuzz", function() {
     expect(FizzBuzz).toBeDefined();
     });
   it("should return an string", function() {
-    expect(typeof FizzBuzz()).toBe("string");
+    expect(typeof FizzBuzz()).toBe("object");
     });
-  /*
-  describe("function fizzBuzz", function() {
-
-
- it("should exist", function() {
-    expect(fizzBuzz).toBeDefined();
+  it("array position is divisible by 3 print Fizz", function() {
+   var result = FizzBuzz();
+    expect(result[3]).toBe("Fizz");
  });
-
- it("should return an array", function() {
-    expect(typeof fizzBuzz()).toBe("object");
- });
-
- it("array length = 100", function() {
-    expect(fizzBuzz().length).toBe(100);
- });
-
- it("array position is divisible by 3 print Fizz", function() {
-   var result = fizzBuzz();
-    expect(result[6]).toBe("Fizz");
- });
-
- it("array position is divisible by 5 print Buzz", function() {
-   var result = fizzBuzz();
+  it("array position is divisible by 5 print Buzz", function() {
+   var result = FizzBuzz();
     expect(result[10]).toBe("Buzz");
  });
-
-it("array position is divisible by 5 and 3 print FizzBuzz", function() {
-   var result = fizzBuzz();
+  it("array position is divisible by 5 and 3 print FizzBuzz", function() {
+   var result = FizzBuzz();
     expect(result[15]).toBe("FizzBuzz");
  });
-
  
 });
-  
-  it("should return 'Fizz' when FizzBuzz()", function() {
-    expect(FizzBuzz()).toBe("Fizz");
-    });
-  it("should be defined w/ one argument", function() {
-    expect(FizzBuzz.length).toBe(3);
-    });
-  it("should return a string", function() {
-    expect(typeof FizzBuzz(95,92,93)).toBe("string");
-    });
-  it("should return 'A' when FizzBuzz(95,92,93)", function() {
-    expect(FizzBuzz(95,92,93)).toBe("A");
-    });
-it("should return 'B' when FizzBuzz(85,81,89)", function() {
-    expect(FizzBuzz(85,81,89)).toBe("B");
-    });
-it("should return 'C' when FizzBuzz(75,71,78)", function() {
-    expect(FizzBuzz(75,71,78)).toBe("C");
-    });
-it("should return 'D' when FizzBuzz(65,61,68)", function() {
-    expect(FizzBuzz(65,61,68)).toBe("D");
-    });
-it("should return 'F' when FizzBuzz(35,31,18)", function() {
-    expect(FizzBuzz(35,31,18)).toBe("F");
-    }); 
-it("should return 'Error' when FizzBuzz(-1,-2,-3)", function() {
-    expect(FizzBuzz(-1,-2,-3)).toBe("Error");
-    });
-   
-  it("should return 'drink coke' when FizzBuzz(17)", function() {
-    expect(FizzBuzz(17)).toBe("drink coke");
-    });
-  it("should return 'drink coke' when FizzBuzz(20)", function() {
-    expect(FizzBuzz(20)).toBe("drink beer");
-    });
-   it("should return 'drink coke' when FizzBuzz(30)", function() {
-    expect(FizzBuzz(30)).toBe("drink whisky");
-    });*/
-});
+ 
+
 
 
 

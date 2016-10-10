@@ -1,7 +1,9 @@
+//function rockPaperScissors (player1,player2){ aqui todo el codigo }
+
 var game = {
   player1: 0,
   player2: 0,
-  rockPaperScissors : function(player1,player2){
+  rockPaperScissors : function(player1,player2){ // rockPaperScissors = rockPaperScissors; y se declara la function despues de la declaracion del objeto y todo el codigo dentro, asi puedo game.rockPaperScissors() puedo ejecutarlo, si hago rockPaperScissors = rockPaperScissors();, entonces game.rockPaperScissors no es una funcion y no es ejecutable
   	var result="";
 	var random=["PAPER","SCISSORS","ROCK"];
 	if (typeof player2 === 'undefined'){
